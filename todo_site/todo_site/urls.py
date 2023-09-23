@@ -19,4 +19,8 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    ###home page###
+    path('', views.index, name="todo"),
+    ###giv id no. item_id name or itemid=i.id###
+    path('del/<str:item_id>', views.remove, name="del"),
 ]
